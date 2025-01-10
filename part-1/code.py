@@ -27,15 +27,17 @@ def f2(an_int):
     return f"{hours:02}:{minutes:02}:{seconds:02}"
 
 
-# def f3(a_list):
-#     """
-#     >>> f3([4,5,6])
-#     '(1,5)'
-#     >>> f3([-3,-5,7])
-#     '(0,-3)'
-#     """
+def f3(a_list):
+    """
+    >>> f3([4,5,6])
+    (1, 5)
+    >>> f3([-3,-5,7])
+    (0, -3)
+    """
+    sorted = list(a_list)
+    sorted.sort()
+    return (a_list.index(sorted[1]),sorted[1])
     
-
 
 if __name__ == '__main__':
     import doctest
