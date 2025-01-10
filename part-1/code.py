@@ -21,16 +21,9 @@ def f2(an_int):
     >>> f2(7322)
     '02:02:02'
     """
-    hours = 0
-    minutes = 0
-    seconds = an_int
-    minutes = seconds // 60
-    hours = seconds // 3600
-    if (minutes):
-        seconds = (seconds - minutes*60)
-        if (hours):
-            minutes = (minutes-hours*60)
-    
+    hours = an_int // 3600 
+    minutes = (an_int % 3600) // 60
+    seconds = an_int % 60
     return f"{hours:02}:{minutes:02}:{seconds:02}"
 
 
