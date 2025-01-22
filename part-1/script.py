@@ -40,6 +40,7 @@ def f3(a_list):
     
 def f4(a_list1, a_list2, an_int):
     """
+    The function should return how many elements from a_list2 appear at least n times in a_list1.
     >>> f4([1, 1, 2, 2, 2, 3, 3, 3, 3], [1, 2], 3)
     1
     >>> f4([1, 1, 1, 2, 2, 2, 3, 3, 3], [1, 2, 3, 4], 4) 
@@ -54,7 +55,17 @@ def f4(a_list1, a_list2, an_int):
         if count >= an_int:
             answer = answer + 1
     return answer
-        
+
+def f5():
+    """
+    >>> f5([1, 2, 3])
+    [[1], [1, 2], [1, 2, 3]]
+    >>> f5([0, 0])
+    [[0], [0, 0]]
+    >>> f5([])
+    []
+    """
+     pass   
             
 
 if __name__ == '__main__':
