@@ -38,6 +38,24 @@ def f3(a_list):
     sorted.sort()
     return (a_list.index(sorted[1]),sorted[1])
     
+def f4(a_list1, a_list2, an_int):
+    """
+    >>> f4([1, 1, 2, 2, 2, 3, 3, 3, 3], [1, 2], 3)
+    1
+    >>> f4([1, 1, 1, 2, 2, 2, 3, 3, 3], [1, 2, 3, 4], 4) 
+    0
+    """
+    answer = 0
+    for i in a_list2:
+        count = 0
+        for j in a_list1:
+            if i == j:
+                count = count+1
+        if count >= an_int:
+            answer = answer + 1
+    return answer
+        
+            
 
 if __name__ == '__main__':
     import doctest
