@@ -56,7 +56,7 @@ def f4(a_list1, a_list2, an_int):
             answer = answer + 1
     return answer
 
-def f5():
+def f5(a_list):
     """
     >>> f5([1, 2, 3])
     [[1], [1, 2], [1, 2, 3]]
@@ -65,7 +65,11 @@ def f5():
     >>> f5([])
     []
     """
-     pass   
+    new_list = []
+    for i in range(1, len(a_list) + 1):
+        new_list.append(a_list[:i])
+    return new_list
+
             
 
 if __name__ == '__main__':
