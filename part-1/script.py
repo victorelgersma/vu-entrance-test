@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/python3
+import re 
 
 def f1(an_int):
     """
@@ -58,6 +58,7 @@ def f4(a_list1, a_list2, an_int):
 
 def f5(a_list):
     """
+    Returns all slices of a_list
     >>> f5([1, 2, 3])
     [[1], [1, 2], [1, 2, 3]]
     >>> f5([0, 0])
@@ -70,7 +71,35 @@ def f5(a_list):
         new_list.append(a_list[:i])
     return new_list
 
-            
+# def f6(a_char):
+# # Issue interpreting \t character. So I want 
+# # Note: I think this is a mistake - we don't want  
+#     """
+#     Find all non-alphanumeric characters in the input_string
+#     >>> f6('B -34;aJK+]\t>')
+#     ' -;+]\t>'
+#     >>> f6('python')
+#     ''
+#     >>> f6('\t')
+#     '\t'
+#     """
+#     return ''.join([char for char in a_char if not char.isalnum()])
+
+def f7(a_str):
+    '''
+    >>> f7('de het de een')
+    '{'de': 2, 'het': 1, 'een':1}
+    >>> f7('')
+    '{}'
+    '''
+
+def f8(a_str):
+    '''
+    >>> f8('8\n8.2\n4.3\n9.5')
+    7.5
+    >>> f8('7.5\nNS\n7\n3.5\nNVD')
+    6.0
+    '''
 
 if __name__ == '__main__':
     import doctest
